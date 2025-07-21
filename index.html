@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팀 프로젝트 페이지</title>
+    <title>시스템 공사중 해커톤</title>
     <style>
         @keyframes fadeIn {
             from {
@@ -27,6 +27,16 @@
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            overflow: hidden; /* Prevent scrollbars from the canvas */
+        }
+
+        #coinCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
 
         .container {
@@ -38,13 +48,23 @@
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.18);
+            position: relative; /* Ensure container is above the canvas */
+            z-index: 1;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #eee;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         ul {
@@ -95,9 +115,10 @@
     </style>
 </head>
 <body>
-
+    <div id="coinCanvas" style="position: fixed; top: 0; left: 0; z-index: 3; min-height: 1980px;"></div>
     <div class="container">
-        <h1>팀 프로젝트 멤버</h1>
+        <h1>시스템 공사중 해커톤 결과</h1>
+        <h2>팀 프로젝트 멤버</h2>
         <ul>
             <li><a href="lily/index.html">👑 Lily's Page</a></li>
             <li><a href="anne/index.html">Anne's Page</a></li>
@@ -110,5 +131,15 @@
         </ul>
     </div>
 
+    <script src="js/coinRain.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof window.showCoinRain === 'function') {
+                window.showCoinRain('coinCanvas', 400, 0.0018, false);
+            } else {
+                console.error('showCoinRain function not found. Make sure js/coinRain.js is loaded correctly.');
+            }
+        });
+    </script>
 </body>
 </html>
