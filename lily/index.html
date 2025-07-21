@@ -10,9 +10,9 @@
     <style>
         :root {
             --bg-color: #0a0a1a;
-            --circuit-color: #00eaff;
-            --text-color: #f0f0f0;
-            --highlight-color: #ff00ff;
+            --circuit-color: #ffffff;
+            --text-color: #ffffff;
+            --highlight-color: #ffffff;
         }
 
         body, html {
@@ -103,10 +103,10 @@
     <canvas class="circuit-bg" id="circuit-canvas"></canvas>
     <main class="main-content">
         <div class="container">
-            <h1>SYSTEM OFFLINE</h1>
-            <p>시스템 성능 개선 및 서비스 안정화를 위한 작업으로 인해<br>현재 페이지에 접속하실 수 없습니다.</p>
+            <h1>시스템 점검중</h1>
+            <p>시스템 성능 개선 및 <br>서비스 안정화를 위한 작업으로 인해<br>현재 페이지에 접속하실 수 없습니다.</p>
             <div class="maintenance-time">
-                <strong>작업 기간:</strong> 화요일 18:00 ~ 수요일 09:00
+                <strong>작업 기간:</strong> 7월 22일 18시 ~ 23일 09시
             </div>
         </div>
     </main>
@@ -116,8 +116,8 @@
         const ctx = canvas.getContext('2d');
         
         const settings = {
-            gridSize: 25,
-            pulseSpeed: 0.002,
+            gridSize: 35,
+            pulseSpeed: 0.001,
             lineColor: getComputedStyle(document.documentElement).getPropertyValue('--circuit-color').trim(),
             lineWidth: 1.5
         };
