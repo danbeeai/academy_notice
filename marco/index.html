@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시스템 점검 안내</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Tech Blue */
+            --secondary-color: #003D6B; /* Darker Tech Blue */
+            --text-color: #333;
+            --bg-color: #EAECEE;
+            --container-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --maintenance-bg: #F0F4F8;
+            --maintenance-border: #005A9C;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: var(--container-bg);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            max-width: 650px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        h1 {
+            font-size: 2.3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #555;
+        }
+        .maintenance-period {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 30px auto;
+            padding: 25px;
+            border: 2px solid var(--maintenance-border);
+            border-radius: 10px;
+            background-color: var(--maintenance-bg);
+            display: block;
+            max-width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .maintenance-period strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+        .footer {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 30px;
+        }
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+        </div>
+        <h1>🖥️ 시스템 점검 안내 🖥️</h1>
+        <p>보다 나은 서비스를 제공해드리기 위해 시스템을 점검하고 있습니다.<br>이용에 불편을 드려 대단히 죄송합니다.</p>
+        <div class="maintenance-period">
+            <strong>점검 시간 안내</strong>
+            화요일 18:00 ~ 수요일 09:00
+        </div>
+        <div class="footer">
+            <p>문의사항: <a href="mailto:contact@example.com">contact@example.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
