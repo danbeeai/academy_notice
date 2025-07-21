@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM DOWN FOR MAINTENANCE</title>
+    <style>
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        body {
+            font-family: 'VT323', monospace, 'Malgun Gothic', '맑은 고딕';
+            background-color: #000;
+            color: #0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: left;
+            text-shadow: 0 0 5px #0f0;
+        }
+        .container {
+            padding: 2em;
+            border: 2px solid #0f0;
+            border-radius: 0;
+            background-color: #080808;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+            white-space: pre;
+        }
+        h1 {
+            color: #0f0;
+            font-size: 1.5em;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background-color: #0f0;
+            animation: blink 1s step-end infinite;
+            margin-left: 5px;
+        }
+        .maintenance-time {
+            font-weight: bold;
+            color: #0ff; /* Cyan for highlight */
+            text-shadow: 0 0 5px #0ff;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>&gt; SYSTEM STATUS: OFFLINE</h1>
+        <p>&gt; REASON: SCHEDULED MAINTENANCE</p>
+        <p class="maintenance-time">&gt; DOWNTIME: 07/22 18:00 - 07/23 09:00</p>
+        <p>&gt; PLEASE STAND BY...</p>
+        <p>&gt; <span class="cursor"></span></p>
+    </div>
+</body>
+</html>
