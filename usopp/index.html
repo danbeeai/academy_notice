@@ -115,10 +115,28 @@
             margin-bottom: 5px;
         }
 
+        .home-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .home-button:hover {
+            background-color: #004494; /* A darker shade of the primary color */
+            transform: translateY(-2px);
+        }
+
         .footer {
             font-size: 0.9em;
             color: #888;
-            margin-top: 30px;
+            margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
@@ -159,6 +177,7 @@
             <p>
                 최대한 신속하게 점검을 완료하고, 안정적인 서비스로 보답하겠습니다.
             </p>
+            <a href="https://academy.ksia.or.kr/" class="home-button">홈화면으로 이동하기</a>
             <div class="footer">
                 &copy; 2025 한국반도체아카데미. All Rights Reserved.
             </div>
