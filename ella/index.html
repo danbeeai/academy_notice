@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 점검 안내</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50e3c2;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --text-color: #34495e;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(-45deg, #eef2f3, #8e9eab, #eef2f3, #8e9eab);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 50px 40px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            animation: fadeIn-up 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .icon-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin: 0 0 15px;
+            color: var(--dark-color);
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 0 0 30px;
+            font-weight: 300;
+        }
+        
+        .time-box {
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+            margin-top: 20px;
+        }
+
+        .time-box p {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .time-box strong {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-wrapper">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+        </div>
+        <h1>홈페이지 점검 안내</h1>
+        <p>더 나은 서비스 경험을 제공하기 위해<br>홈페이지를 점검하고 있습니다. 잠시만 기다려주세요.</p>
+        
+        <div class="time-box">
+            <p><strong>점검 시간</strong></p>
+            <p>화요일 18:00 ~ 수요일 09:00</p>
+        </div>
+
+        
+    </div>
+</body>
+</html>
